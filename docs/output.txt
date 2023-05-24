@@ -1,0 +1,71 @@
+{
+   "title": "Refonte du site web de l'Apur",
+   "description": "L'Apur souhaite une refonte complète de son site web afin de rendre les données, les études et l'expertise plus accessibles et visibles pour tous les publics. Le nouveau site doit inclure un design plus clair, une navigation intuitive et une gestion des contenus facilitée.",
+   "modules": [
+      {
+         "title": "Conception et architecture du site",
+         "description": "Nous proposons une réflexion sur la structure du site, son organisation et la manière dont les différentes sections interagissent. Cela inclut l'établissement d'une charte graphique moderne et cohérente, ainsi que l'organisation des pages et des rubriques en fonction des besoins du client.",
+         "tasks": [
+            {
+               "title": "Analyse des besoins et des objectifs",
+               "description": "Nous commencerons par analyser les besoins, les objectifs et les attentes du client pour définir les axes prioritaires de la refonte du site et proposer des solutions adaptées.",
+               "price": 3000
+            },
+            {
+               "title": "Création de la charte graphique",
+               "description": "Nous élaborerons une charte graphique moderne et responsive en accord avec l'image et les valeurs de l'Apur, incluant les couleurs, les polices de caractères, les icônes et les mises en page.",
+               "price": 5000
+            },
+            {
+               "title": "Maquettage des pages principales",
+               "description": "Nous réaliserons des maquettes pour les pages principales du site, en veillant à créer une interface utilisateur conviviale et intuitive qui répond aux besoins des différentes cibles de l'Apur.",
+               "price": 4000
+            },
+            {
+               "title": "Arborescence et navigation",
+               "description": "Nous travaillerons sur la structuration des rubriques, des pages et des sous-pages du site pour optimiser la navigation et faciliter l'accès aux informations pour les utilisateurs.",
+               "price": 3000
+            },
+            {
+               "title": "Responsive Design",
+               "description": "Nous nous assurerons que le site est entièrement responsive et adapté à tous les types d'appareils (ordinateurs, tablettes, smartphones) pour offrir une expérience utilisateur optimale.",
+               "price": 3000
+            }
+         ]
+      },
+      {
+         "title": "Développement technique",
+         "description": "Nous mettons en place toutes les fonctionnalités attendues, telles que le moteur de recherche multicritères, le fil d'Ariane et la protection contre le spam, en utilisant les technologies appropriées et en nous assurant de la performances et de la compatibilité du site.",
+         "tasks": [
+            {
+               "title": "Choix et intégration du CMS",
+               "description": "Nous choisirons et argumenterons le CMS le plus approprié en fonction des besoins spécifiques de l'Apur, puis nous procéderons à son intégration et à sa configuration.",
+               "price": 6000
+            },
+            {
+               "title": "Création des pages et des templates",
+               "description": "Nous développerons les différents modèles de pages en fonction des maquettes établies et des besoins spécifiques de chaque type de contenu, en assurant une gestion simplifiée pour les administrateurs.",
+               "price": 5000
+            },
+            {
+               "title": "Intégration des fonctionnalités",
+               "description": "Nous intégrerons les fonctionnalités attendues, telles que le moteur de recherche multicritères, le fil d'Ariane et la protection contre le spam, en veillant à leur bon fonctionnement et leur compatibilité avec les différents navigateurs.",
+               "price": 4000
+            },
+            {
+               "title": "Optimisation des performances",
+               "description": "Nous mettrons en place des solutions de caching et d'optimisation pour garantir un site fluide et rapide, proposant une expérience utilisateur de qualité.",
+               "price": 3000
+            },
+            {
+               "title": "Tests et validation",
+               "description": "Nous réaliserons des tests sur les différentes fonctionnalités, les performances et la compatibilité du site pour nous assurer qu'il répond aux exigences du client et qu'il est prêt à être mis en ligne.",
+               "price": 3000
+            }
+         ]
+      },
+      
+      //... (Ajoutez d'autres modules et tâches ici, jusqu'à atteindre 10 modules au total)
+
+   ]
+}

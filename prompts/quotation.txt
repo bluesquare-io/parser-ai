@@ -1,0 +1,25 @@
+Propose un devis pour réaliser le projet du prospect dont les caractéristiques sont décrits par son document comme suit :
+'#content'
+
+Propose un devis en respectant le format json ci-dessous.
+Tu créeras une dizaine de modules et chaque module doit contenir au moins 5 tâches.
+Le devis doit être détaillé et proposer des description longues d’environ 1000 caractères.
+{
+     ‘title’: ‘Application XYZ,
+        ‘description’: ‘XYZ est une application  de géo-activation qui … ’ ,
+        ‘modules’: [{
+                        ‘title’: ‘Inscription des utilisateurs’,
+                        ‘description’ : ‘ Un module d’inscription permet aux utilisateur de se connecter au travers des écrans maquettes décrites en annexes. ‘,
+                        ‘tasks’ : [
+                                ‘title’: ‘Inscription et validation du compte’,
+                                ‘description’: ‘Un module d’inscription permet aux utilisateur de se connecter au travers des écrans maquettes décrites en annexes. ’,
+                                ‘price’: 2000
+                        ], [
+                                ‘title’: ‘Invitation ’,
+                                ‘description’: ‘L’utilisateur peut aussi s’inscrire en recevant un partage de souvenir d’une de ses connaissance.…’,
+                                ‘price’: 2000
+                        ]
+
+                },
+                {…}]
+\}
