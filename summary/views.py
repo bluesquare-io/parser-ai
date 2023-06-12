@@ -11,12 +11,38 @@ from .helpers.openai_helpers import *
 doc_to_analyze_path = os.getenv("PROJECT_ABSOLUTE_PATH") + "/docs/cdc.pdf"
 prompts_path = os.getenv("PROJECT_ABSOLUTE_PATH") + "/prompts"
 summary_file_path = os.getenv("PROJECT_ABSOLUTE_PATH") + "/docs/summary.txt"
+analyze_file_path = os.getenv("PROJECT_ABSOLUTE_PATH") + "/docs/analyze.txt"
 
 prompt_chunk_summary_text_path = os.getenv("PROJECT_ABSOLUTE_PATH") + "/prompts/summarize.txt"
 with open(prompt_chunk_summary_text_path, "r") as prompt_chunk_summary_text:
     prompt_chunk_summary_text = prompt_chunk_summary_text.read()
 summaries = []
 
+from langchain.agents import load_tools
+from langchain.agents import initialize_agent
+from langchain.agents import AgentType
+from langchain.schema import AgentFinish
+from langchain.llms import OpenAI
+from langchain.callbacks.base import BaseCallbackHandler
+from langchain.document_loaders import TextLoader
+from langchain.indexes import VectorstoreIndexCreator
+
+doc_to_analyze_path = os.getenv("PROJECT_ABSOLUTE_PATH") + "/docs/analyze.txt"
+
+callback_agent = ""
+class MyCustomHandler(BaseCallbackHandler):
+    def on_agent_finish(self, finish: AgentFinish, **kwargs: any) -> any:
+        callback_agent = finish.return_values['output']
+
+def analyze_interface(request):
+    return render(request, 'index.html', {'analysis': ''})
+
+def analyze(request):
+    loader = TextLoader(analyze_file_path)
+    index = VectorstoreIndexCreator().from_loaders([loader])
+    query = request.POST.get('question', '')
+    result = index.query(query)
+    return render(request, 'index.html', {'analysis': result})
 
 def index(request):
     # if not os.path.isfile(doc_to_analyze_path):
@@ -44,6 +70,4 @@ def index(request):
     contents['#content'] = summary_content
     prompt = load_prompt("quotation.txt", contents)
     final_value = add_chat_gpt_message(prompt)
-
     return HttpResponse(final_value)
-
